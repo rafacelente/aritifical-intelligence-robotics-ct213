@@ -57,7 +57,7 @@ def plot_path(cost_map, start, goal, path, filename, save_fig=True, show_fig=Tru
         plt.title('A*')
 
     if save_fig:
-        plt.savefig('2_InformedSearch/Figures/%s.%s' % (filename, fig_format), format=fig_format)
+        plt.savefig('%s.%s' % (filename, fig_format), format=fig_format)
 
     if show_fig:
         plt.show()
