@@ -98,7 +98,7 @@ class PathPlanner(object):
                     if not successor.closed:
                         successor.parent = node
                         successor.g = successor.distance_to(*goal_position)
-                        successor.f = node.f + self.cost_map.get_edge_cost(node.get_position(), successor.get_position())
+                        successor.f = node.f + self.cost_map.get_edge_cost(node_pos, successor_pos)
                         if successor_pos == goal_position:
                             return self.construct_path(self.node_grid.get_node(*successor_pos)), self.node_grid.get_node(*successor_pos).f
                         heapq.heappush(pq, (successor.g, successor)) # Insertion
